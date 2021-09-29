@@ -17,8 +17,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var messageLabel2: UILabel!
     
     @IBOutlet weak var imageDisplayed: UIImageView!
-    @IBAction func buttonPressed(_ sender: Any) { messageLabel.text = "Welcome to UMass"
-        imageDisplayed.image = UIImage(named: "Zoomass")
+    @IBAction func buttonPressed(_ sender: Any) { if (messageLabel.text == "Welcome to UMass") {imageDisplayed.image = UIImage(named: "Zoomass")
+        messageLabel.text = "The Zoo!"
+    }
+    else {messageLabel.text = "Error!"
+        messageLabel.textColor = UIColor.systemRed
+        imageDisplayed.image = UIImage(named: "")
+        
+    }
         
         
         
