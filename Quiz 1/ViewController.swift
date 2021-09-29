@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -16,19 +16,40 @@ class ViewController: UIViewController {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var messageLabel2: UILabel!
     
-    @IBOutlet weak var imageDisplayed: UIImageView!
-    @IBAction func buttonPressed(_ sender: Any) { if (messageLabel.text == "Welcome to UMass") {imageDisplayed.image = UIImage(named: "Zoomass")
-        messageLabel.text = "The Zoo!"
-    }
-    else {messageLabel.text = "Error!"
-        messageLabel.textColor = UIColor.systemRed
-        imageDisplayed.image = UIImage(named: "")
-        
-    }
-        
-        
-        
-    }
+    var messageNumber = 0
     
-}
+    @IBOutlet weak var imageDisplayed: UIImageView!
+    @IBAction func buttonPressed(_ sender: Any) {
+        let messages = ["Welcome to UMass",
+                        "The Zoo!",
+                        "Best of UMass",
+                        "Best Dining",
+                        "Error!"]
+        messageLabel.text = messages[ messageNumber ]
+        messageNumber += 1
+        if messageNumber == messages.count {messageNumber = 0}
+        if messageLabel.text == "The Zoo!" { imageDisplayed.image = UIImage(named: "Zoomass")}
+        if messageLabel.text == "Best of UMass" { imageDisplayed.image = UIImage(named: "Hockey")}
+        if messageLabel.text == "Best Dining" {
+            imageDisplayed.image = UIImage(named: "Best food")
+        }
+        if messageLabel.text == "Error!" {
+            imageDisplayed.image = UIImage(named: "")
+        }
+        if messageLabel.text == "Welcome to UMass" {imageDisplayed.image = UIImage(named: "UMass")}
+           
+        }
+            
+           
+        
+        
+    
+        
+        
+        
+        
+    }
+
+     
+    
 
