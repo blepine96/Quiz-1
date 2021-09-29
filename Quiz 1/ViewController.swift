@@ -13,7 +13,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    @IBOutlet weak var messageLabel: UILabel!
+    
+    @IBOutlet weak var imageDisplayed: UIImageView!
+    @IBAction func buttonPressed(_ sender: Any) {
+    }
+    
 }
 
