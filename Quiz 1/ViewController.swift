@@ -17,9 +17,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var messageLabel2: UILabel!
     
     @IBOutlet weak var imageDisplayed: UIImageView!
-    @IBAction func buttonPressed(_ sender: Any) { messageLabel.text = "Hello There"
-        messageLabel2.textAlignment = NSTextAlignment.left
-        messageLabel2.textColor = UIColor.systemRed
+    @IBAction func buttonPressed(_ sender: Any) { messageLabel.text = "Welcome to UMass"
+        imageDisplayed.image = UIImage(named: "Zoomass")
+        
+        
         
     }
     
