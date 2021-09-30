@@ -20,8 +20,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imageDisplayed: UIImageView!
     @IBAction func buttonPressed(_ sender: Any) {
+        let zooConstant = "The Zoo!"
+        
         let messages = ["Welcome to UMass",
-                        "The Zoo!",
+                        zooConstant,
                         "Best of UMass",
                         "Best Dining",
                         "Error!"]
